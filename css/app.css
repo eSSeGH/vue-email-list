@@ -1,0 +1,12 @@
+ul {
+    list-style-type: none;
+}
+
+header {
+    box-shadow: 0 0 10px inset white;
+    height: 100px;
+}
+
+main {
+    height: calc(100vh - 100px)
+}

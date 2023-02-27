@@ -9,14 +9,13 @@ createApp({
     },
     methods: {
         fetchEmail() {
-            axios.get('https//flynn.boolean.careers/exercises/api/random/mail')
+            axios.get('https://flynn.boolean.careers/exercises/api/random/mail')
             .then((res) => {
-                console.log(res, res.data)
-                
+                this.eMailArray.push(res.data.response)
             })
         }
     },
-    mounted() {
+    beforeMount() {
         for (i=0; i<10; i++) {
             console.log(`ciclo nr ${i} `)
             this.fetchEmail()
